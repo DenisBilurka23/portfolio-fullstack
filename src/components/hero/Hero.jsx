@@ -7,7 +7,7 @@ import useMeasure from 'react-use-measure';
 
 import HeroScene from '../../three/hero/HeroScene';
 
-import Bg from '../../assets/images/Untitled-2.jpg';
+import Bg from '../../assets/images/background.jpg';
 
 import styled from 'styled-components';
 
@@ -42,43 +42,43 @@ const Hero = ({ setTop }) => {
   }, [topView]);
 
   return (
-    <HeroContainer
-      ref={mouseRef}
-      onPointerMove={(e) => {
-        mouseX.set((e.clientX - bounds.x - bounds.width / 2) * 0.5);
-        mouseY.set((e.clientY - bounds.y - bounds.height / 2));
-      }}
-    >
-      <NavRef ref={topRef} />
-      <BackgroundImage src={Bg} />
-      <Gradient />
-      <HeroScene mouseX={mouseX} mouseY={mouseY} />
+      <HeroContainer
+          ref={mouseRef}
+          onPointerMove={(e) => {
+            mouseX.set((e.clientX - bounds.x - bounds.width / 2) * 0.5);
+            mouseY.set((e.clientY - bounds.y - bounds.height / 2));
+          }}
+      >
+        <NavRef ref={topRef} />
+        <BackgroundImage src={Bg} />
+        <Gradient />
+        <HeroScene mouseX={mouseX} mouseY={mouseY} />
 
-      <Loader
-        containerStyles={{
-          backgroundColor: 'black',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          width: '100vw',
-          height: '100vh',
-        }}
-        innerStyles={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          width: '100vw',
-          height: '100vh',
-          backgroundColor: 'black',
-        }}
-        barStyles={{
-          width: '20vw',
-          maxWidth: '500px',
-          minWidth: '150px',
-        }}
-        dataStyles={{ display: 'none' }}
-      />
-    </HeroContainer>
+        <Loader
+            containerStyles={{
+              backgroundColor: 'black',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              width: '100vw',
+              height: '100vh',
+            }}
+            innerStyles={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              width: '100vw',
+              height: '100vh',
+              backgroundColor: 'black',
+            }}
+            barStyles={{
+              width: '20vw',
+              maxWidth: '500px',
+              minWidth: '150px',
+            }}
+            dataStyles={{ display: 'none' }}
+        />
+      </HeroContainer>
   );
 };
 
