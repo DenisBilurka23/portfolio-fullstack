@@ -1,7 +1,7 @@
 import Chat from "../assets/images/chat.png";
 import ClothesStore from "../assets/images/clothes-store.png";
 import Table from "../assets/images/table.png";
-import SoupBorscht from "../assets/images/soup-and-borscht.png";
+import SoupBorscht from "../assets/images/soup-borscht.png";
 import BakeryStore from "../assets/images/bakery-store.png";
 import Courses from "../assets/images/courses.png";
 
